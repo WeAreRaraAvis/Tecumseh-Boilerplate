@@ -1,4 +1,4 @@
-dateModified: 1696111030
+dateModified: 1696111713
 email:
   fromEmail: creative@raraavis.design
   fromName: 'Tecumseh Boilerplate'
@@ -8,6 +8,11 @@ meta:
     0d3b124c-a22c-492b-905d-244d625e5e84: 'Tecumseh Boilerplate' # Tecumseh Boilerplate
     8878a560-e842-40bc-a612-27fcdf9fb770: 'Tecumseh Boilerplate' # Tecumseh Boilerplate
     82722786-54b3-49e2-8e7b-d1e280e90288: Common # Common
+plugins:
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true
