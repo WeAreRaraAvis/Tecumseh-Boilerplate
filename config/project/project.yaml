@@ -1,0 +1,22 @@
+dateModified: 1696111030
+email:
+  fromEmail: creative@raraavis.design
+  fromName: 'Tecumseh Boilerplate'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    0d3b124c-a22c-492b-905d-244d625e5e84: 'Tecumseh Boilerplate' # Tecumseh Boilerplate
+    8878a560-e842-40bc-a612-27fcdf9fb770: 'Tecumseh Boilerplate' # Tecumseh Boilerplate
+    82722786-54b3-49e2-8e7b-d1e280e90288: Common # Common
+system:
+  edition: solo
+  live: true
+  name: 'Tecumseh Boilerplate'
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
