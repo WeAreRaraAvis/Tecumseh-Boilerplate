@@ -3,7 +3,7 @@ enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: 'Tecumseh Boilerplate'
+name: TecumsehBoilerplate
 primary: true
 siteGroup: 0d3b124c-a22c-492b-905d-244d625e5e84 # Tecumseh Boilerplate
 sortOrder: 1

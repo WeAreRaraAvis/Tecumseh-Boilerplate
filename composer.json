@@ -2,6 +2,7 @@
   "require": {
     "craftcms/cms": "^4.4.0",
     "nystudio107/craft-twigpack": "4.0.0-beta.4",
+    "servd/craft-asset-storage": "3.5.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
