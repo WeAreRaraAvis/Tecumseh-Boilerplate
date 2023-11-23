@@ -7,11 +7,10 @@ function bold {
     tput sgr0
 }
 clear 
-chmod +x ./.devcontainer/bird.txt
 echo " "
 echo " "
 echo " "
-cat ./.devcontainer/bird.txt 
+cat ./bird.txt 
 echo " "
 echo " "
 echo " "
