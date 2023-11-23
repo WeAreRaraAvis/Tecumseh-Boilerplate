@@ -9,6 +9,6 @@
     "ghcr.io/ddev/ddev/install-ddev:latest": {}
   },
 
-  "postCreateCommand": "chmod +x ./postBuild.sh && ./postBuild.sh || echo 'Post Creation Script Failed'"
+  "postCreateCommand": "chmod +x ./.devcontainer/postBuild.sh && ./postBuild.sh || echo 'Post Creation Script Failed'"
 
 }

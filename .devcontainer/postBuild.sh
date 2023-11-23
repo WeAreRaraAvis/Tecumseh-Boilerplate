@@ -43,4 +43,4 @@ ddev craft install/craft \
 
 chmod +x ./.devcontainer/welcome.sh 
 
-./welcome.sh
+./.devcontainer/welcome.sh 

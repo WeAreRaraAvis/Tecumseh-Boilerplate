@@ -10,7 +10,7 @@ clear
 echo " "
 echo " "
 echo " "
-cat ./bird.txt 
+cat ./.devcontainer/bird.txt 
 echo " "
 echo " "
 echo " "
