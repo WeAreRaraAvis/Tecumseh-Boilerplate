@@ -10,5 +10,8 @@
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
   "forwardPorts": [6080, 5901],
-  "postCreateCommand": "chmod +x ./.devcontainer/postBuild.sh && ./postBuild.sh || echo 'Post Creation Script Failed'"
+  "postCreateCommand": "chmod +x ./.devcontainer/postBuild.sh && ./postBuild.sh || echo 'Post Creation Script Failed'; echo 'export CYPRESS_CACHE_FOLDER=\"/workspaces/Tecumseh-Boilerplate/.cypress-caching\"' >> ~/.bashrc",
+  "remoteEnv": {
+    "CYPRESS_CACHE_FOLDER": "/workspaces/Tecumseh-Boilerplate/.cypress-caching"
+  }
 }
