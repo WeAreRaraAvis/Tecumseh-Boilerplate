@@ -18,4 +18,5 @@ echo "============= $(bold Tecumseh Boilerplate Configuration Complete) ========
 echo "============= As a first step, please change the login credentials within the Craft CMS control panel relative to the project you're working on."
 echo "============= From there, configure your project within our Servd account accordingly. Please note, once you've pushed up your changes - you will also need to do"
 echo "============= a database dump and import/sync it in Servd's control panel. If you do not, your project URL will claim that Craft CMS is not installed."
+echo -e "\033[0;33mNote: To access the Craft CMS application, you will need to navigate to the URL associated with port 8080 in the 'ports' tab.\033[0m"
 echo " "
