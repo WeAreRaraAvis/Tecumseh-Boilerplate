@@ -33,7 +33,7 @@ ddev npm install
 
 # To Pull Existing Database -- TODO
 
-# install craft via CLI
+# install craft via CLI 
 ddev craft install/craft \
   --interactive=0 \
   --username=RaraAdmin \

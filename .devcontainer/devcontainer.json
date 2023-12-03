@@ -10,7 +10,15 @@
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
   "forwardPorts": [6080, 5901],
-  "postCreateCommand": "chmod +x ./.devcontainer/postBuild.sh && ./postBuild.sh || echo 'Post Creation Script Failed'; echo 'export CYPRESS_CACHE_FOLDER=\"/workspaces/Tecumseh-Boilerplate/.cypress-caching\"' >> ~/.bashrc",
+  "portsAttributes": {
+    "8080": {
+      "label": "Craft CMS Application"
+    },
+    "6080": {
+      "label": "Cypress Testing"
+    }
+  },
+  "postCreateCommand": "echo 'alias tecumseh=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/postBuild.sh\"' >> ~/.bashrc; echo 'alias quality=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/quality.sh\"' >> ~/.bashrc; echo 'export CYPRESS_CACHE_FOLDER=\"/workspaces/Tecumseh-Boilerplate/.cypress-caching\"' >> ~/.bashrc; source ~/.bashrc",
   "remoteEnv": {
     "CYPRESS_CACHE_FOLDER": "/workspaces/Tecumseh-Boilerplate/.cypress-caching"
   }
