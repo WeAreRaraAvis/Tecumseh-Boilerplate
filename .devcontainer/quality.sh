@@ -10,5 +10,5 @@ if [ -d "$CYPRESS_CACHE_DIR" ]; then
 else
     echo "Cypress cache not found. Installing Cypress..."
     npx cypress install
-    echo "Cypress Installation Completed. Please re-enter 'quality' to start Cypress on this container."
+    echo "Cypress Installation Completed. Please re-enter 'quality' to start Cypress on this container. Note: To access the cypress dashboard, you will need to navigate to the URL associated with port 6080 in the "ports" tab. It should have an identifying label as well. "
 fi
