@@ -1,45 +1,65 @@
 #!/bin/bash
-set -ex
+set +ex
 
-echo "======== DDEV Configuration ========"
-# This file is called in three scenarios:
-# 1. fresh creation of devcontainer
-# 2. rebuild
-# 3. full rebuild
+draw_progress_bar() {
+    local progress=$1
+    local total=$2
+    local filled=$(( progress * 40 / total ))
+    local empty=$(( 40 - filled ))
 
-# ddev default commands
-# see: https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/#github-codespaces
+    printf -v bar '%*s' "$filled"
+    bar=${bar// /█}
+    printf -v empty_bar '%*s' "$empty"
+    empty_bar=${empty_bar// /-}
 
-# https://github.com/ddev/ddev/pull/5290#issuecomment-1689024764
-ddev config global --omit-containers=ddev-router
+    printf "\rProgress: [%s%s]" "$bar" "$empty_bar"
+}
 
-# download images beforehand
-ddev debug download-images
+total_steps=10
+current_step=0
 
-# avoid errors on rebuilds
-ddev poweroff
+update_progress() {
+    draw_progress_bar $((current_step++)) $total_steps
+}
 
-# start ddev project
-ddev start -y
+echo "======== Configuring Tecumseh ========"
+update_progress
+ddev config global --omit-containers=ddev-router &> /dev/null
 
-# DDEV will automatically set the codespaces preview URL in .env. 
-# If this is not working in future, you can use this snippet for replacement:
-# ddev exec 'sed -i "/PRIMARY_SITE_URL=/c APP_URL=$DDEV_PRIMARY_URL" .env'
+update_progress
+ddev debug download-images &> /dev/null
 
-echo "======== Installing Project Specific Dependencies Within DDEV Container ========"
-# normal project setup
-ddev composer install 
-ddev npm install
+update_progress
+ddev poweroff &> /dev/null
+
+update_progress
+ddev start -y &> /dev/null
+
+update_progress
+ddev composer install &> /dev/null
+
+update_progress
+ddev npm install &> /dev/null
 
 # To Pull Existing Database -- TODO
 
 # install craft via CLI 
+update_progress
 ddev craft install/craft \
   --interactive=0 \
   --username=RaraAdmin \
   --password=MyDaedalus2023^ \
   --email=creative@raraavis.design \
-  --site-name=TecumsehBoilerplate
+  --site-name=TecumsehBoilerplate &> /dev/null
+
+update_progress
+chmod +x ./.devcontainer/welcome.sh &> /dev/null
+
+update_progress
+./.devcontainer/welcome.sh &> /dev/null
+
+# Final step
+draw_progress_bar $total_steps $total_steps
 
 chmod +x ./.devcontainer/welcome.sh 
 
