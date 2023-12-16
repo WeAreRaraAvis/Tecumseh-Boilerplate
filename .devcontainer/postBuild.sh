@@ -15,7 +15,7 @@ draw_progress_bar() {
     printf "\rProgress: [%s%s]" "$bar" "$empty_bar"
 }
 
-total_steps=10
+total_steps=11
 current_step=0
 
 update_progress() {
@@ -57,6 +57,9 @@ chmod +x ./.devcontainer/welcome.sh &> /dev/null
 
 update_progress
 ./.devcontainer/welcome.sh &> /dev/null
+
+update_progress
+npx cypress install &> /dev/null
 
 # Final step
 draw_progress_bar $total_steps $total_steps
