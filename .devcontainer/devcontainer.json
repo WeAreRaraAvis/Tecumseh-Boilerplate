@@ -1,6 +1,7 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
+    "ghcr.io/shyim/devcontainers-features/php:0": {},
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/ddev/ddev/install-ddev:latest": {},
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
@@ -14,7 +15,7 @@
       "label": "Cypress Testing"
     }
   },
-  "postCreateCommand": "echo 'alias tecumseh=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/postBuild.sh\"' >> ~/.bashrc; echo 'alias quality=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/quality.sh\"' >> ~/.bashrc; echo 'export CYPRESS_CACHE_FOLDER=\"/workspaces/Tecumseh-Boilerplate/.cypress-caching\"' >> ~/.bashrc; source ~/.bashrc",
+  "postCreateCommand": "echo 'alias activate=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/postBuild.sh\"' >> ~/.bashrc; echo 'alias cypress=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/quality.sh\"' >> ~/.bashrc; echo 'export CYPRESS_CACHE_FOLDER=\"/workspaces/Tecumseh-Boilerplate/.cypress-caching\"' >> ~/.bashrc; source ~/.bashrc",
   "remoteEnv": {
     "CYPRESS_CACHE_FOLDER": "/workspaces/Tecumseh-Boilerplate/.cypress-caching"
   }
