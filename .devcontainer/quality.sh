@@ -13,8 +13,11 @@ CYPRESS_CACHE_DIR="/workspaces/Tecumseh-Boilerplate/.cypress-caching"
 # Check if the Cypress cache directory exists
 if [ -d "$CYPRESS_CACHE_DIR" ]; then
     echo "Cypress cache found. Opening Cypress..."
-    echo "The Cypress GUI can be found at: https://${CODESPACE_NAME}-6080.app.github.dev/?autoconnect=true&password=vscode"
-    npx cypress open
+    clear
+    echo " "
+    echo "$(bold The Cypress GUI can be found at: https://${CODESPACE_NAME}-6080.app.github.dev/?autoconnect=true&password=vscode)"
+    npx cypress open &> /dev/null
+    echo " "
 else
-    echo "Cypress cache not found. Something may have gone wrong during Tecumseh activation."
+    echo "Cypress cache not found. Verify that Tecumseh activation was successful."
 fi

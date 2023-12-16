@@ -22,6 +22,8 @@ update_progress() {
     draw_progress_bar $((current_step++)) $total_steps
 }
 
+clear
+echo " "
 echo "======== Configuring Tecumseh ========"
 update_progress
 ddev config global --omit-containers=ddev-router &> /dev/null
