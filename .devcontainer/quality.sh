@@ -15,7 +15,13 @@ if [ -d "$CYPRESS_CACHE_DIR" ]; then
     echo "Cypress cache found. Opening Cypress..."
     clear
     echo " "
-    echo "$(bold The Cypress GUI can be found at: https://${CODESPACE_NAME}-6080.app.github.dev/?autoconnect=true&password=vscode)"
+
+    # Construct the URL
+    URL="https://${CODESPACE_NAME}-6080.app.github.dev/?autoconnect=true&password=vscode"
+
+    # Output the entire URL in bold
+    bold "The Cypress GUI can be found at: $URL"
+
     npx cypress open &> /dev/null
     echo " "
 else
