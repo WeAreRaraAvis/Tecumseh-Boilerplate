@@ -1,4 +1,4 @@
-dateModified: 1696194199
+dateModified: 1702841415
 email:
   fromEmail: creative@raraavis.design
   fromName: 'Tecumseh Boilerplate'
@@ -6,8 +6,13 @@ email:
 meta:
   __names__:
     0d3b124c-a22c-492b-905d-244d625e5e84: 'Tecumseh Boilerplate' # Tecumseh Boilerplate
+    7aa67058-a1f3-46ad-8a6b-4cc480137301: Homepage # Homepage
+    7d7e9761-3bb2-420c-b2ed-4261b167287f: 'Example Module' # Example Module
     8878a560-e842-40bc-a612-27fcdf9fb770: TecumsehBoilerplate # TecumsehBoilerplate
     82722786-54b3-49e2-8e7b-d1e280e90288: Common # Common
+    90619285-e728-461d-aabd-7bf789279798: Modules # Modules
+    c4a9f311-2f6c-4ab4-b53d-401d62db2f1e: Homepage # Homepage
+    dfbf0d7a-bb6e-489c-bb35-3f40a63521fd: Example # Example
 plugins:
   servd-asset-storage:
     edition: standard

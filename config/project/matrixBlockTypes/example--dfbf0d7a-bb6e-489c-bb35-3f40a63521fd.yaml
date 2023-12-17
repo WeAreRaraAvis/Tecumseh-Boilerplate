@@ -1,0 +1,46 @@
+field: 90619285-e728-461d-aabd-7bf789279798 # Modules
+fieldLayouts:
+  2873fe42-dfef-433e-9bb0-b666b7aaf538:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7d7e9761-3bb2-420c-b2ed-4261b167287f # Example Module
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5be7e43c-0428-46da-b59d-5434c760f4af
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b9dfde4a-3b1a-4795-8fc6-192a762cb985
+        userCondition: null
+fields:
+  7d7e9761-3bb2-420c-b2ed-4261b167287f: # Example Module
+    columnSuffix: tbvmpfur
+    contentColumnType: text
+    fieldGroup: null
+    handle: exampleModule
+    instructions: 'I am an example module'
+    name: 'Example Module'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: example
+name: Example
+sortOrder: 1

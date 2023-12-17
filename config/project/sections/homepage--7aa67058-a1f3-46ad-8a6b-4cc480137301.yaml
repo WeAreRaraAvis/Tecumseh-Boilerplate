@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: homepage
+name: Homepage
+propagationMethod: all
+siteSettings:
+  8878a560-e842-40bc-a612-27fcdf9fb770: # TecumsehBoilerplate
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: __home__
+type: single

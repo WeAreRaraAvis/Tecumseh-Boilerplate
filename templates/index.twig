@@ -9,6 +9,8 @@
 </head>
 <body>
  <script src="main.js"></script>
- <h1 class="text-4xl text-blue-700">I Am Tailwind</h1>
+    {% for module in entry.coreModules %}
+            {% include '_coreModules/' ~ module.type %}
+    {% endfor %}
 </body>
 </html>
