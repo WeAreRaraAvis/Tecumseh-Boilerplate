@@ -66,6 +66,12 @@ npx cypress install &> /dev/null
 # Final step
 draw_progress_bar $total_steps $total_steps
 
+if [ -f ".db-dumps/latest.sql" ]; then
+    ddev import-db --file=.db-dumps/latest.sql
+else
+    echo "No database dump present. Defaulting to a vanilla install."
+fi
+
 chmod +x ./.devcontainer/welcome.sh 
 
 ./.devcontainer/welcome.sh 
