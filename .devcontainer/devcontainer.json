@@ -15,7 +15,7 @@
       "label": "Cypress Testing"
     }
   },
-  "postCreateCommand": "echo 'alias activate=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/postBuild.sh\"' >> ~/.bashrc; echo 'alias cypress=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/quality.sh\"' >> ~/.bashrc; echo 'export CYPRESS_CACHE_FOLDER=\"/workspaces/Tecumseh-Boilerplate/.cypress-caching\"' >> ~/.bashrc; echo 'alias package=\"npx webpack\"' >> ~/.bashrc; echo 'alias export=\"ddev export-db --gzip=false --file .db-dumps/latest.sql\"' >> ~/.bashrc; source ~/.bashrc",
+  "postCreateCommand": "echo 'alias activate=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/postBuild.sh\"' >> ~/.bashrc; echo 'alias cypress=\"bash /workspaces/Tecumseh-Boilerplate/.devcontainer/quality.sh\"' >> ~/.bashrc; echo 'export CYPRESS_CACHE_FOLDER=\"/workspaces/Tecumseh-Boilerplate/.cypress-caching\"' >> ~/.bashrc; echo 'alias package=\"npx webpack\"' >> ~/.bashrc; echo 'alias finalize=\"ddev export-db --gzip=false --file .db-dumps/latest.sql\"' >> ~/.bashrc; source ~/.bashrc",
   "remoteEnv": {
     "CYPRESS_CACHE_FOLDER": "/workspaces/Tecumseh-Boilerplate/.cypress-caching"
   }
