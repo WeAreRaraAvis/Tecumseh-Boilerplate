@@ -1,3 +1,4 @@
 name: Cypress.io
 uses: cypress-io/github-action@v6.6.1
+working-directory: cypress
             
