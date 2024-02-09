@@ -10,6 +10,7 @@ module.exports = defineConfig({
     specPattern: 'cypress/firstTest.cy.js',
     // Since no baseUrl is preferred, it is omitted
     chromeWebSecurity: false,
+    supportFile: false,
     video: false, // Video recording is disabled for faster test execution
     screenshotOnRunFailure: true,
     defaultCommandTimeout: 10000,
