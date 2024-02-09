@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash - ELIMINATE CYPRESS CACHING CONFIG AS IT IS REDUNDANT!
 set +ex
 
 draw_progress_bar() {
