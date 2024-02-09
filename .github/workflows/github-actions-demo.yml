@@ -1,4 +1,6 @@
-name: Cypress.io
+name: Run Cypress
+on: push
 uses: cypress-io/github-action@v6.6.1
 working-directory: cypress
+
             
